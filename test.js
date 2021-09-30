@@ -10,3 +10,7 @@ fetch(req)
     .then(function(response) {
         console.log(response.json());
     })
+
+document.getElementById('button').onclick = function() {
+   alert(req);
+}
