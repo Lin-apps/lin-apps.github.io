@@ -1,15 +1,13 @@
-var url = 'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2021-10-09&' +
-          'sortBy=popularity&' +
-          'apiKey=4f4388190e044f4d80e0a27e7cbaf70b';
+import { getDatabase, ref, onValue} from "firebase/database";
 
-var req = new Request(url);
+const db = getDatabase();
+const starCountRef = ref(db, 'posts/' + postId + '/starCount');
+onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  updateStarCount(postElement, data);
+});
 
-fetch(req)
-    .then(function(response) {
-        console.log(response.json());
-    })
+alert(data);
 
 document.getElementById('button').onclick = function() {
    alert(req);
