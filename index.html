@@ -1,17 +1,28 @@
-<html> 
-<body> 
+<html>
 
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
-<script id="MainScript"> 
-// CONFIGURATION 
+  <head>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="test.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Comments Test</h1>
+
+    <div class="comment-form">
+      <form>
+        <input type="text" class="comment-text" placeholder="comment text.."/>
+        <input type="submit" value="Comment"/>
+      </form>
+    </div>
+
+    <div class="comments">
+      <ul class="comments-list">
+      </ul>
+    </div>
 
 
-var firebaseConfig = { apiKey: "AIzaSyD40E81dAW_U130x27Ur_cVFZy-h1T0Jgg", authDomain: "fir-javas.firebaseapp.com", databaseURL: "https://fir-javas.firebaseio.com", projectId: "fir-javas", storageBucket: "fir-javas.appspot.com", messagingSenderld: "355152352324", appId: "1:355152352324:web:de03d674106ed7c3c01811" 
-}; 
+  </body>
 
-firebase.initializeApp(firebaseConfig); </script>
-</body>
-</html> 
- 
+</html>
