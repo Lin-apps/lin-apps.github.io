@@ -1,11 +1,2 @@
-import { getDatabase, ref, onValue} from "firebase/database";
-
-const db = getDatabase();
-const starCountRef = ref(db, 'posts/' + postId + '/starCount');
-onValue(starCountRef, (snapshot) => {
-  const data = snapshot.val();
-  updateStarCount(postElement, data);
-});
-
-
-document.getElementById("demo").innerHTML = data;
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
