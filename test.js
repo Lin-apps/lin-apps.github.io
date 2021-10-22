@@ -1,6 +1,11 @@
-var rootRef = firebase.database().ref();
-rootRef.once("value")
-  .then(function(snapshot) {
-    var key = snapshot.key; // null
-    var childKey = snapshot.child("users/ada").key; // "ada"
-  });
+import { getDatabase, ref, onValue} from "firebase/database";
+
+const db = getDatabase();
+const starCountRef = ref(db, 'posts/' + postId + '/starCount');
+onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  updateStarCount(postElement, data);
+});
+
+
+document.getElementById("demo").innerHTML = data;
